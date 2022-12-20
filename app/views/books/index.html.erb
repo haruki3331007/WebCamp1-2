@@ -1,0 +1,22 @@
+<header><h1>Books</h1></header>
+
+
+<!--Making a new book-->
+<div class="newBook">
+  <div class=newBookHeader>
+    <h3> New Book</h3>
+  </div>
+
+  <%= form_with model: @newbook, method: :post do |f|%>
+
+    <div class="newBookPost">
+    <p>Title</p>
+    <%= f.text_field :title %>
+
+    <p>Body</p>
+    <%= f.text_area :body%>
+    </div>
+
+    <div class="newBooksubmit"><%= f.submit 'Creat Book' %></div>
+  <% end %>
+</div>
