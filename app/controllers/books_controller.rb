@@ -9,6 +9,10 @@ class BooksController < ApplicationController
     newbook.save
   end
 
+  def show
+    @book_details = Book.find(params[:id])
+  end
+
   private
   def newbook_params
     params.require(:book).permit(:title, :body)
