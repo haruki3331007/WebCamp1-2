@@ -1,0 +1,14 @@
+<h1>Editing Book</h1>
+<%= form_with model: @bookedit do |book| %>
+
+  <p>Title</p>
+  <%= book.text_field :title%>
+
+  <p>Body</p>
+  <%= book.text_area :body %>
+
+  <div class="update">
+  <%= book.submit 'Update Book'%>
+  </div>
+<% end %>
+<p><%= link_to 'Show',  book_path(@bookedit) %> | <%= link_to 'Back', "/books" %></p>
