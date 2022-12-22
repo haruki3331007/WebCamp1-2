@@ -1,3 +1,4 @@
+<div class="index">
 <header><h1>Books</h1></header>
 
 <!--Makiing book list-->
@@ -6,8 +7,8 @@
     <!--Making table head-->
     <thead>
       <tr>
-        <th>title</th>
-        <th>body</th>
+        <th>Title</th>
+        <th>Body</th>
       </tr>
     </thead>
 
@@ -35,7 +36,7 @@
 
 <%= form_with model: @newbook, method: :post do |f|%>
   <% if @newbook.errors.any? %>
-    <div id="error_explanation">
+    <div class="error_explanation">
         <h2><%= pluralize(@newbook.errors.count, "error") %> prohibited this book from being saved:</h2>
 
         <ul>
@@ -46,26 +47,28 @@
     </div>
 
     <div class="field_error">
-      <%= f.label :title %>
-      <%= f.text_field :title %>
+      <div><%= f.label :title %></div>
+      <div><%= f.text_field :title %></div>
     </div>
 
     <div class="field_error">
-      <%= f.label :body %>
-      <%= f.text_area :body %>
+      <div><%= f.label :body %></div>
+      <div><%= f.text_area :body %></div>
     </div>
 
   <% else %>
     <div class="field">
-      <div class="title"><%= f.label :title %></div>
-      <%= f.text_field :title %>
+      <div><%= f.label :title %></div>
+      <div><%= f.text_field :title %></div>
     </div>
 
     <div class="field">
-      <div class="body"><%= f.label :body %></div>
-      <%= f.text_area :body %>
+      <div><%= f.label :body %></div>
+      <div><%= f.text_area :body %></div>
     </div>
   <% end %>
 
     <div class="newBooksubmit"><%= f.submit 'Creat Book' %></div>
 <% end %>
+
+</div>

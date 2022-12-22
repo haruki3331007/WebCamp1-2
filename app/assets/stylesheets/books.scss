@@ -1,3 +1,167 @@
 // Place all the styles related to the books controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: https://sass-lang.com/
+
+//index
+.index{
+  margin: 40px;
+
+
+table{
+  margin: 10px;
+  table-layout: fixed;
+  border-spacing: 5px;
+}
+
+thead tr th{
+  font-size: 15px;
+  padding-bottom: 10px;
+  //background-color: red;
+}
+
+//tbody{
+  //background-color: blue;
+//}
+
+tbody tr td:nth-of-type(-n+2){
+  //background-color: yellow;
+  width: 150px;
+}
+
+tbody tr td:nth-of-type(n+3){
+  //background-color: orange;
+  padding-right: 5px;
+}
+
+.newBookHeader{
+  font-size: 20px;
+  margin: 10px 20px 5px 20px;
+}
+
+.field{
+  margin: 5px 20px;
+}
+
+.field div{
+  margin-bottom: 5px;
+}
+
+.newBooksubmit{
+   margin: 10px 20px;
+}
+
+//Scaffold バリデーションエラーメッセージより
+
+.error_explanation{
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  background-color: #f0f0f0;
+}
+
+h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px -7px 0;
+    background-color: #c00;
+    color: #fff;
+  }
+
+.error_explanation ul{
+  margin: 50px;
+}
+
+.error_explanation ul li{
+    font-size: 12px;
+    list-style: square;
+  }
+
+  .field_error{
+  margin: 5px 20px;
+}
+
+.field_error div{
+  margin-bottom: 5px;
+}
+}
+
+
+
+//show
+.show{
+  margin: 20px;
+
+  .flash{
+    margin-left: 40px;
+  }
+
+  .bookContent{
+    display: flex;
+    margin:40px;
+  }
+
+  .content{
+    font-weight: bold;
+    font-size: 15px;
+  }
+}
+
+
+//edit
+.edit{
+  margin: 20px;
+  
+  //Scaffold バリデーションエラーメッセージより
+
+.error_explanation{
+  width: 450px;
+  border: 2px solid red;
+  padding: 7px 7px 0px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  background-color: #f0f0f0;
+}
+
+h2 {
+    text-align: left;
+    font-weight: bold;
+    padding: 5px 5px 5px 15px;
+    font-size: 12px;
+    margin: -7px -7px 0;
+    background-color: #c00;
+    color: #fff;
+  }
+
+.error_explanation ul{
+  margin: 50px;
+}
+
+.error_explanation ul li{
+    font-size: 12px;
+    list-style: square;
+  }
+
+  .content_error{
+    margin: 10px 0px;
+  }
+
+  .content_error p{
+    margin-bottom: 5px;
+  }
+
+  .content{
+    margin: 10px 0px;
+  }
+
+  .content p{
+    margin-bottom: 5px;
+  }
+
+  .footer{
+    margin-top: 10px;
+  }
+}
