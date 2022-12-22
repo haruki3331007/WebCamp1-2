@@ -23,7 +23,6 @@ class BooksController < ApplicationController
     @bookedit = Book.find(params[:id])
   end
 
-
   def update
     @bookedit = Book.find(params[:id])
     if @bookedit.update(bookedit_params)
@@ -38,7 +37,7 @@ class BooksController < ApplicationController
   def destroy
     @bookdelete = Book.find(params[:id])
     @bookdelete.delete
-    redirect_to '/books/'
+    redirect_to '/books'
   end
 
 

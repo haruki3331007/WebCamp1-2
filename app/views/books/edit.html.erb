@@ -1,44 +1,42 @@
 <div class="edit">
   <h1>Editing Book</h1>
+
   <%= form_with model: @bookedit do |book| %>
 
-   <% if @bookedit.errors.any? %>
-    <div class="error_explanation">
-        <h2><%= pluralize(@bookedit.errors.count, "error") %> prohibited this book from being saved:</h2>
+    <% if @bookedit.errors.any? %>
+      <div class="error_explanation">
+          <h2><%= pluralize(@bookedit.errors.count, "error") %> prohibited this book from being saved:</h2>
 
-        <ul>
-          <% @bookedit.errors.each do |error| %>
-            <li><%= error.full_message %></li>
-          <% end %>
-        </ul>
-    </div>
+          <ul>
+            <% @bookedit.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+          </ul>
+      </div>
 
-    <div class="content_error">
-    <p>Title</p>
-    <%= book.text_field :title%>
-    </div>
+      <div class="content_error">
+       <p>Title</p><%= book.text_field :title%>
+      </div>
 
-    <div class="content_error">
-    <p>Body</p>
-    <%= book.text_area :body %>
-    </div>
+      <div class="content_error">
+        <p>Body</p><%= book.text_area :body %>
+      </div>
 
-<% else %>
-    <div class="content">
-    <p>Title</p>
-    <%= book.text_field :title%>
-    </div>
+    <% else %>
+      <div class="content">
+        <p>Title</p><%= book.text_field :title%>
+      </div>
 
-    <div class="content">
-    <p>Body</p>
-    <%= book.text_area :body %>
-    </div>
+      <div class="content">
+        <p>Body</p><%= book.text_area :body %>
+      </div>
 
-<% end %>
+    <% end %>
 
     <div class="update">
-    <%= book.submit 'Update Book'%>
+      <%= book.submit 'Update Book'%>
     </div>
   <% end %>
+
   <p class="footer"><%= link_to 'Show',  book_path(@bookedit) %> | <%= link_to 'Back', "/books" %></p>
 </div>

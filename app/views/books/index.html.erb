@@ -1,74 +1,76 @@
 <div class="index">
-<header><h1>Books</h1></header>
+  <header><h1>Books</h1></header>
 
-<!--Makiing book list-->
-<div class="booklist">
-  <table>
-    <!--Making table head-->
-    <thead>
-      <tr>
-        <th>Title</th>
-        <th>Body</th>
-      </tr>
-    </thead>
-
-    <!--Making table content-->
-    <tbody>
-      <% @booklist.each do |book| %>
+  <!--Makiing book list-->
+  <div class="booklist">
+    <table>
+      <!--Making table head-->
+      <thead>
         <tr>
-          <td><%= book.title %></td>
-          <td><%= book.body %></td>
-          <td><%= link_to 'Show', "/books/#{book.id}" %></td>
-          <td><%= link_to 'Edit', "/books/#{book.id}/edit" %></td>
-          <td><%= link_to 'Delete', "/books/#{book.id}", method: :delete, "data-confirm" => "Are you sure?" %></td>
+          <th>Title</th>
+          <th>Body</th>
         </tr>
-      <% end %>
-    </tbody>
+      </thead>
 
-  </table>
-</div>
+      <!--Making table content-->
+      <tbody>
+        <% @booklist.each do |book| %>
+          <tr>
+            <td><%= book.title %></td>
+            <td><%= book.body %></td>
+            <td><%= link_to 'Show', "/books/#{book.id}" %></td>
+            <td><%= link_to 'Edit', "/books/#{book.id}/edit" %></td>
+            <td><%= link_to 'Destroy', "/books/#{book.id}", method: :delete, "data-confirm" => "Are you sure?" %></td>
+          </tr>
+        <% end %>
+      </tbody>
 
-<!--Making new book-->
-<div class="newBook">
-  <div class=newBookHeader>
-    <h3> New Book</h3>
+    </table>
   </div>
 
-<%= form_with model: @newbook, method: :post do |f|%>
-  <% if @newbook.errors.any? %>
-    <div class="error_explanation">
-        <h2><%= pluralize(@newbook.errors.count, "error") %> prohibited this book from being saved:</h2>
-
-        <ul>
-          <% @newbook.errors.each do |error| %>
-            <li><%= error.full_message %></li>
-          <% end %>
-        </ul>
+  <!--Making new book-->
+  <div class="newBook">
+    <div class=newBookHeader>
+      <h3> New Book</h3>
     </div>
 
-    <div class="field_error">
-      <div><%= f.label :title %></div>
-      <div><%= f.text_field :title %></div>
-    </div>
+  <%= form_with model: @newbook, method: :post do |f|%>
+  <!--Making error-->
+    <% if @newbook.errors.any? %>
+      <div class="error_explanation">
+          <h2><%= pluralize(@newbook.errors.count, "error") %> prohibited this book from being saved:</h2>
 
-    <div class="field_error">
-      <div><%= f.label :body %></div>
-      <div><%= f.text_area :body %></div>
-    </div>
+          <ul>
+            <% @newbook.errors.each do |error| %>
+              <li><%= error.full_message %></li>
+            <% end %>
+          </ul>
+      </div>
 
-  <% else %>
-    <div class="field">
-      <div><%= f.label :title %></div>
-      <div><%= f.text_field :title %></div>
-    </div>
+      <div class="field_error">
+        <div><%= f.label :title %></div>
+        <div><%= f.text_field :title %></div>
+      </div>
 
-    <div class="field">
-      <div><%= f.label :body %></div>
-      <div><%= f.text_area :body %></div>
-    </div>
+      <div class="field_error">
+        <div><%= f.label :body %></div>
+        <div><%= f.text_area :body %></div>
+      </div>
+
+    <!--Making not error-->
+    <% else %>
+      <div class="field">
+        <div><%= f.label :title %></div>
+        <div><%= f.text_field :title %></div>
+      </div>
+
+      <div class="field">
+        <div><%= f.label :body %></div>
+        <div><%= f.text_area :body %></div>
+      </div>
+    <% end %>
+
+    <div class="newBooksubmit"><%= f.submit 'Create Book' %></div>
   <% end %>
-
-    <div class="newBooksubmit"><%= f.submit 'Creat Book' %></div>
-<% end %>
 
 </div>

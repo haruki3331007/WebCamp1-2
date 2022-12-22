@@ -7,86 +7,86 @@
   margin: 40px;
 
 
-table{
-  margin: 10px;
-  table-layout: fixed;
-  border-spacing: 5px;
-}
-
-thead tr th{
-  font-size: 15px;
-  padding-bottom: 10px;
-  //background-color: red;
-}
-
-//tbody{
-  //background-color: blue;
-//}
-
-tbody tr td:nth-of-type(-n+2){
-  //background-color: yellow;
-  width: 150px;
-}
-
-tbody tr td:nth-of-type(n+3){
-  //background-color: orange;
-  padding-right: 5px;
-}
-
-.newBookHeader{
-  font-size: 20px;
-  margin: 10px 20px 5px 20px;
-}
-
-.field{
-  margin: 5px 20px;
-}
-
-.field div{
-  margin-bottom: 5px;
-}
-
-.newBooksubmit{
-   margin: 10px 20px;
-}
-
-//Scaffold バリデーションエラーメッセージより
-
-.error_explanation{
-  width: 450px;
-  border: 2px solid red;
-  padding: 7px 7px 0px;
-  margin-bottom: 20px;
-  margin-left: 20px;
-  background-color: #f0f0f0;
-}
-
-h2 {
-    text-align: left;
-    font-weight: bold;
-    padding: 5px 5px 5px 15px;
-    font-size: 12px;
-    margin: -7px -7px 0;
-    background-color: #c00;
-    color: #fff;
+  table{
+    margin: 10px;
+    table-layout: fixed;
+    border-spacing: 5px;
   }
 
-.error_explanation ul{
-  margin: 50px;
-}
-
-.error_explanation ul li{
-    font-size: 12px;
-    list-style: square;
+  thead tr th{
+    font-size: 15px;
+    padding-bottom: 10px;
+    //background-color: red;
   }
 
-  .field_error{
-  margin: 5px 20px;
-}
+  //tbody{
+    //background-color: blue;
+  //}
 
-.field_error div{
-  margin-bottom: 5px;
-}
+  tbody tr td:nth-of-type(-n+2){
+    //background-color: yellow;
+    width: 150px;
+  }
+
+  tbody tr td:nth-of-type(n+3){
+    //background-color: orange;
+    padding-right: 5px;
+  }
+
+  .newBookHeader{
+    font-size: 20px;
+    margin: 10px 20px 5px 20px;
+  }
+
+  .field{
+    margin: 5px 20px;
+  }
+
+  .field div{
+    margin-bottom: 5px;
+  }
+
+  .newBooksubmit{
+     margin: 10px 20px;
+  }
+
+  //Scaffold バリデーションエラーメッセージより
+
+  .error_explanation{
+    width: 450px;
+    border: 2px solid red;
+    padding: 7px 7px 0px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    background-color: #f0f0f0;
+  }
+
+  h2 {
+      text-align: left;
+      font-weight: bold;
+      padding: 5px 5px 5px 15px;
+      font-size: 12px;
+      margin: -7px -7px 0;
+      background-color: #c00;
+      color: #fff;
+    }
+
+  .error_explanation ul{
+    margin: 50px;
+  }
+
+  .error_explanation ul li{
+      font-size: 12px;
+      list-style: square;
+    }
+
+    .field_error{
+    margin: 5px 20px;
+  }
+
+  .field_error div{
+    margin-bottom: 5px;
+  }
 }
 
 
@@ -101,7 +101,7 @@ h2 {
 
   .bookContent{
     display: flex;
-    margin:40px;
+    margin: 40px;
   }
 
   .content{
@@ -114,35 +114,34 @@ h2 {
 //edit
 .edit{
   margin: 20px;
-  
+
   //Scaffold バリデーションエラーメッセージより
-
-.error_explanation{
-  width: 450px;
-  border: 2px solid red;
-  padding: 7px 7px 0px;
-  margin-bottom: 20px;
-  margin-left: 20px;
-  background-color: #f0f0f0;
-}
-
-h2 {
-    text-align: left;
-    font-weight: bold;
-    padding: 5px 5px 5px 15px;
-    font-size: 12px;
-    margin: -7px -7px 0;
-    background-color: #c00;
-    color: #fff;
+  .error_explanation{
+    width: 450px;
+    border: 2px solid red;
+    padding: 7px 7px 0px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    background-color: #f0f0f0;
   }
 
-.error_explanation ul{
-  margin: 50px;
-}
+  h2{
+      text-align: left;
+      font-weight: bold;
+      padding: 5px 5px 5px 15px;
+      font-size: 12px;
+      margin: -7px -7px 0;
+      background-color: #c00;
+      color: #fff;
+    }
 
-.error_explanation ul li{
-    font-size: 12px;
-    list-style: square;
+  .error_explanation ul{
+    margin: 50px;
+  }
+
+  .error_explanation ul li{
+      font-size: 12px;
+      list-style: square;
   }
 
   .content_error{
